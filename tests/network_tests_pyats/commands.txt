@@ -14,3 +14,7 @@ pyats diff ospf-before/ ospf-after/ --output ospfdiffs
 - We can use pyATS learn for pre/post change testing - it documents it each time then compares the files
 - pyATS diff commands can tell us about changes - output of command says if files are identical or not
   - Useful in the situation of comparing routing table pre and post change
+- DQ used to parse nested data structures
+  - Essentially returning us a modified parsed dictionary of things we actually need
+  - Allows us to avoid nested loops etc.
+- Aetest jobs allows us to tie different tests together
