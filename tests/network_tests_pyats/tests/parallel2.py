@@ -15,4 +15,4 @@ testbed = load("testbed.yaml")
 testbed.connect(log_stdout=False)
 # Call pcall to run function passing in testbed device names and objs - We're returned tuple with 3 elements
 results = pcall(get_ospf, device_name=testbed.devices.keys(),testbed_value=testbed.devices.values())
-from ipdb import set_trace; set_trace()
+#from ipdb import set_trace; set_trace()
