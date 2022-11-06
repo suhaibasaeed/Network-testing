@@ -1,11 +1,7 @@
-
-from nornir import InitNornir
 from nornir_scrapli.tasks import send_command
-from nornir_utils.plugins.functions import print_result
+from pytest_check import check_func
 
-# Initalise nornir
-nr = InitNornir(config_file="config.yaml")
-
+@check_func
 def pull_ospf(task):
 
     result = task.run(task=send_command, command='show ip ospf neighbors')
@@ -18,6 +14,12 @@ def pull_ospf(task):
     for i in intfs:
         ospf_neighbours.append(i['neighbor_ipaddr'])
 
-results = nr.run(task=pull_ospf)
-#import ipdb; ipdb.set_trace()
+    num_neighbours = len(ospf_neighbours)
+
+    assert num_neighbours == 2
+
+def test_nornir(nr):
+    nr.run(task=pull_ospf)
+
+
 
