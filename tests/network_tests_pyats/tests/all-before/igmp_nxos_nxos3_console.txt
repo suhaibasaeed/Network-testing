@@ -1,0 +1,27 @@
++++ nxos3 with via 'cli': executing command 'show ip igmp interface vrf all' +++
+show ip igmp interface vrf all
+IGMP Interfaces for VRF "default", count: 0
+nxos3# 
++++ nxos3 with via 'cli': executing command 'show ip igmp local-groups vrf all' +++
+show ip igmp local-groups vrf all
+IGMP Locally Joined Group Membership for VRF "default"
+Group Address    Source Address   Type     Interface   Last Reported 
+
+nxos3# 
++++ nxos3 with via 'cli': executing command 'show ip igmp groups vrf all' +++
+show ip igmp groups vrf all
+nxos3# 
+Could not learn <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpGroups'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'Igmp'                                                                                                               |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpInterface'>, arguments: {'vrf':'all'}                                                    |
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpLocalGroups'>, arguments: {'vrf':'all'}                                                  |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_igmp.ShowIpIgmpGroups'>, arguments: {'vrf':'all'}                                                       |
+|====================================================================================================================================================|

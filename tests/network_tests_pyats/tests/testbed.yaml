@@ -1,0 +1,40 @@
+devices:
+  nxos1:
+    connections:
+      cli:
+        ip: 192.168.1.108
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+      enable:
+        password: admin
+    os: nxos
+    type: nxos
+  nxos2:
+    connections:
+      cli:
+        ip: 192.168.1.109
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+      enable:
+        password: admin
+    os: nxos
+    type: nxos
+  nxos3:
+    connections:
+      cli:
+        ip: 192.168.1.106
+        protocol: ssh
+    credentials:
+      default:
+        password: admin
+        username: admin
+      enable:
+        password: admin
+    os: nxos
+    type: nxos

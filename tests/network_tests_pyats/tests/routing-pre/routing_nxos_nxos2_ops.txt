@@ -1,0 +1,148 @@
+{
+  "_exclude": [
+    "updated"
+  ],
+  "attributes": null,
+  "commands": null,
+  "connections": null,
+  "context_manager": {},
+  "info": {
+    "vrf": {
+      "default": {
+        "address_family": {
+          "ipv4": {
+            "routes": {
+              "10.1.1.0/24": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "10.1.1.2",
+                      "outgoing_interface": "Ethernet1/1",
+                      "updated": "00:56:22"
+                    }
+                  }
+                },
+                "route": "10.1.1.0/24",
+                "route_preference": 0,
+                "source_protocol": "direct"
+              },
+              "10.1.1.2/32": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "10.1.1.2",
+                      "outgoing_interface": "Ethernet1/1",
+                      "updated": "00:56:22"
+                    }
+                  }
+                },
+                "route": "10.1.1.2/32",
+                "route_preference": 0,
+                "source_protocol": "local"
+              },
+              "2.2.2.0/24": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "2.2.2.2",
+                      "outgoing_interface": "Loopback0",
+                      "updated": "00:57:04"
+                    }
+                  }
+                },
+                "route": "2.2.2.0/24",
+                "route_preference": 0,
+                "source_protocol": "direct"
+              },
+              "2.2.2.2/32": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "2.2.2.2",
+                      "outgoing_interface": "Loopback0",
+                      "updated": "00:57:04"
+                    }
+                  }
+                },
+                "route": "2.2.2.2/32",
+                "route_preference": 0,
+                "source_protocol": "local"
+              }
+            }
+          }
+        }
+      },
+      "management": {
+        "address_family": {
+          "ipv4": {
+            "routes": {
+              "0.0.0.0/0": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "192.168.1.1",
+                      "updated": "00:56:38"
+                    }
+                  }
+                },
+                "route": "0.0.0.0/0",
+                "route_preference": 1,
+                "source_protocol": "static"
+              },
+              "192.168.1.0/24": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "192.168.1.109",
+                      "outgoing_interface": "mgmt0",
+                      "updated": "00:56:49"
+                    }
+                  }
+                },
+                "route": "192.168.1.0/24",
+                "route_preference": 0,
+                "source_protocol": "direct"
+              },
+              "192.168.1.109/32": {
+                "active": true,
+                "metric": 0,
+                "next_hop": {
+                  "next_hop_list": {
+                    "1": {
+                      "index": 1,
+                      "next_hop": "192.168.1.109",
+                      "outgoing_interface": "mgmt0",
+                      "updated": "00:56:49"
+                    }
+                  }
+                },
+                "route": "192.168.1.109/32",
+                "route_preference": 0,
+                "source_protocol": "local"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "raw_data": false
+}

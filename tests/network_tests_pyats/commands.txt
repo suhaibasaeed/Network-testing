@@ -1,0 +1,16 @@
+## Commands used
+
+# Create new testbed file interactively called testbed.yaml
+pyats create testbed interactive --output=testbed.yaml
+# Use pyATS learn to get all interface info from devices in testbed file and save in folder called interfaces.before
+pyats learn interface --testbed-file testbed.yaml --output interfaces-before
+# Or to learn everything about a device and save in folder called all-before
+pyats learn all --testbed-file testbed.yaml --output all-before
+# Then after doing same after change we can do diff between two folders and store in folder called ospfdiffs
+pyats diff ospf-before/ ospf-after/ --output ospfdiffs
+
+## Notes
+- The device names under devices dict in testbed file has to match the actual prompt on device, otherwise won't work
+- We can use pyATS learn for pre/post change testing - it documents it each time then compares the files
+- pyATS diff commands can tell us about changes - output of command says if files are identical or not
+  - Useful in the situation of comparing routing table pre and post change

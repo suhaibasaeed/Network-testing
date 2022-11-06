@@ -1,0 +1,17 @@
++++ nxos2 with via 'cli': executing command 'show ip prefix-list' +++
+show ip prefix-list
+nxos2# 
++++ nxos2 with via 'cli': executing command 'show ipv6 prefix-list' +++
+show ipv6 prefix-list
+nxos2# 
+
+Could not learn <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpv6PrefixList'>
+Parser Output is empty
++====================================================================================================================================================+
+| Commands for learning feature 'PrefixList'                                                                                                         |
++====================================================================================================================================================+
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpPrefixList'>                                                                          |
+|   cmd: <class 'genie.libs.parser.nxos.show_prefix_list.ShowIpv6PrefixList'>                                                                        |
+|====================================================================================================================================================|

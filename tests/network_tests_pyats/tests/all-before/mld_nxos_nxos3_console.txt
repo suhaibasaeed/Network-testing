@@ -1,0 +1,31 @@
++++ nxos3 with via 'cli': executing command 'show ipv6 mld groups vrf all' +++
+show ipv6 mld groups vrf all
+MLD Connected Group Membership for VRF "default" - 0 total entries
+
+MLD Connected Group Membership for VRF "management" - 0 total entries
+
+nxos3# 
++++ nxos3 with via 'cli': executing command 'show ipv6 mld interface vrf all' +++
+show ipv6 mld interface vrf all
+ICMPv6 MLD Interfaces for VRF "default"
+
+ICMPv6 MLD Interfaces for VRF "management"
+
+nxos3# 
++++ nxos3 with via 'cli': executing command 'show ipv6 mld local-groups vrf all' +++
+show ipv6 mld local-groups vrf all
+MLD Locally Joined Group Membership for VRF "default"
+Group   Type     Interface   Last Reported 
+nxos3# 
++====================================================================================================================================================+
+| Commands for learning feature 'Mld'                                                                                                                |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldGroups'>, arguments: {'vrf':'all'}                                                       |
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldLocalGroups'>, arguments: {'vrf':'all'}                                                  |
+|====================================================================================================================================================|
+| - Commands with empty output                                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_mld.ShowIpv6MldInterface'>, arguments: {'vrf':'all'}                                                    |
+|====================================================================================================================================================|

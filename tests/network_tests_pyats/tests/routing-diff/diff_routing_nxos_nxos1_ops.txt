@@ -1,0 +1,26 @@
+--- routing-pre/routing_nxos_nxos1_ops.txt
++++ routing-post/routing_nxos_nxos1_ops.txt
+ info:
+  vrf:
+   default:
+    address_family:
+     ipv4:
+      routes:
++      111.111.111.111/32:
++       active: True
++       metric: 0
++       next_hop:
++        next_hop_list:
++         1:
++          index: 1
++          next_hop: 111.111.111.111
++          outgoing_interface: Loopback111
++          updated: 00:00:35
++         2:
++          index: 2
++          next_hop: 111.111.111.111
++          outgoing_interface: Loopback111
++          updated: 00:00:35
++       route: 111.111.111.111/32
++       route_preference: 0
++       source_protocol: direct

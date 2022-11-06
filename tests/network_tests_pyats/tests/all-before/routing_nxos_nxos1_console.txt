@@ -1,0 +1,48 @@
++++ nxos1 with via 'cli': executing command 'show ip route vrf all' +++
+show ip route vrf all
+IP Route Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+1.1.1.0/24, ubest/mbest: 1/0, attached
+    *via 1.1.1.1, Lo0, [0/0], 00:24:08, direct
+1.1.1.1/32, ubest/mbest: 1/0, attached
+    *via 1.1.1.1, Lo0, [0/0], 00:24:08, local
+10.1.1.0/24, ubest/mbest: 1/0, attached
+    *via 10.1.1.1, Eth1/1, [0/0], 00:23:14, direct
+10.1.1.1/32, ubest/mbest: 1/0, attached
+    *via 10.1.1.1, Eth1/1, [0/0], 00:23:14, local
+
+IP Route Table for VRF "management"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+'%<string>' in via output denotes VRF <string>
+
+0.0.0.0/0, ubest/mbest: 1/0
+    *via 192.168.1.1, [1/0], 00:23:40, static
+192.168.1.0/24, ubest/mbest: 1/0, attached
+    *via 192.168.1.108, mgmt0, [0/0], 00:23:54, direct
+192.168.1.108/32, ubest/mbest: 1/0, attached
+    *via 192.168.1.108, mgmt0, [0/0], 00:23:54, local
+
+nxos1# 
++++ nxos1 with via 'cli': executing command 'show ipv6 route vrf all' +++
+show ipv6 route vrf all
+IPv6 Routing Table for VRF "default"
+'*' denotes best ucast next-hop
+'**' denotes best mcast next-hop
+'[x/y]' denotes [preference/metric]
+
+
+nxos1# 
++====================================================================================================================================================+
+| Commands for learning feature 'Routing'                                                                                                            |
++====================================================================================================================================================+
+| - Parsed commands                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------------------------------|
+|   cmd: <class 'genie.libs.parser.nxos.show_routing.ShowIpRoute'>, arguments: {'vrf':'all'}                                                         |
+|   cmd: <class 'genie.libs.parser.nxos.show_routing.ShowIpv6Route'>, arguments: {'vrf':'all'}                                                       |
+|====================================================================================================================================================|
