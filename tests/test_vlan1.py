@@ -1,9 +1,9 @@
-from nornir import InitNornir
+from pytest_check import check_func
 from nornir_scrapli.tasks import send_command
 from nornir_utils.plugins.functions import print_result
 
-nr = InitNornir('config.yaml')
-
+# We don't want assertions to end on first fail
+@check_func
 def get_vlans(task):
 
     result = task.run(task=send_command, command='show vlan')
@@ -18,7 +18,10 @@ def get_vlans(task):
         name = vlans[vlan]['name']
         vlan_dict = {"id": vlan_id, "name": name}
         vlan_list.append(vlan_dict)
-    print(vlan_list)
 
-results = nr.run(task=get_vlans)
+    assert len(vlan_list) == 5, f"{task.host.name} doesn't have the correct VLANs configured"
+
+def test_nornir(nr):
+    nr.run(task=get_vlans)
+
 #import ipdb; ipdb.set_trace()
