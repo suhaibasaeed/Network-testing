@@ -5,7 +5,7 @@ from nornir.core.filter import F
 
 nr = InitNornir(config_file='config.yaml')
 
-def check_ospf_neighbours(task):
+def check_ospf_neighbours_get_data(task):
 
     result = task.run(task=send_command, command='show ip ospf neighbors')
     # Take result and return structured data - then store in host object
@@ -24,7 +24,7 @@ class TestOSPFNeigbours:
     @pytest.fixture(scope='class', autouse=True)
     def setup_teardown(self, pytestnr):
         pytestnrfiltered = pytestnr.filter(F(groups__contains='nxos'))
-        pytestnrfiltered.run(task=check_ospf_neighbours)
+        pytestnrfiltered.run(task=check_ospf_neighbours_get_data)
         yield
         for host in pytestnrfiltered.inventory.hosts.values():
             # Remove key from all host obj after test completed - essentially clean up
