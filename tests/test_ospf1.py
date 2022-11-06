@@ -16,7 +16,7 @@ def pull_ospf(task):
 
     num_neighbours = len(ospf_neighbours)
 
-    assert num_neighbours == 2
+    assert num_neighbours == 2, f"{task.host.name} does not has 2 neighbors"
 
 def test_nornir(nr):
     nr.run(task=pull_ospf)
